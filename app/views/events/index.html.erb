@@ -1,0 +1,12 @@
+<h1>Events</h1>
+<% @events.each do |event| %>
+  <% if event.date <= DateTime.now %>
+  <h2> Past Shows </h2>
+    <%= render "index", event: event %>
+  <% else %>
+  <h2> Upcoming shows </h2>
+    <%= render "index", event: event %>
+  <% end %>
+<% end %>
+
+<%= link_to "Add a new event", new_event_path %>
