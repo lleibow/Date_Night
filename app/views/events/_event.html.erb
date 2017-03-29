@@ -9,7 +9,10 @@
     <%= event.label :description %>
     <%= event.text_area :description %>
   </p>
-
+  <p>
+    <%= event.label :picture %>
+    <%= event.file_field :picture %>
+  </p>
   <p>
     <%= event.submit %>
   </p>
